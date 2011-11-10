@@ -7,6 +7,23 @@ require 'time'
 require 'hpricot'
 require 'forwardable'
 
+# this fixes cannot load such file -- active_support/core_ext/blank
+# I think it's a fix because of Rails 3, but I implemented it so long
+# ago I can't remember where I got it, or why exactly you need it.
+
+require 'active_support/core_ext/array'
+require 'active_support/core_ext/module'
+require 'active_support/core_ext/object/blank'
+require 'active_support/core_ext/time/acts_like'
+require 'active_support/core_ext/time/calculations'
+require 'active_support/core_ext/time/conversions'
+require 'active_support/core_ext/time/marshal'
+require 'active_support/core_ext/time/publicize_conversion_methods'
+require 'active_support/core_ext/time/zones'
+require 'active_support/lazy_load_hooks'
+require 'active_support/inflector'
+require 'active_support/core_ext/string'
+
 require 'digest/md5'
 require 'fileutils'
 require 'loggable'
